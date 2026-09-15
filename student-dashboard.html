@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - Smart Complaint System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="container navbar-content">
+
+            <div class="brand">
+                Smart Complaint System
+            </div>
+
+            <div>
+                <span class="text-muted">Welcome, Bhumit</span>
+
+                <a href="index.html"
+                   class="btn btn-primary logout-link"
+                   style="width:auto; margin-left:15px; padding:8px 15px;">
+                    Logout
+                </a>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <div class="page-title">
+
+            <h2>Student Dashboard</h2>
+
+            <p class="text-muted">
+                Submit and track your university complaints.
+            </p>
+
+        </div>
+
+
+        <div style="
+            display:grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap:25px;
+        ">
+
+
+            <!-- Submit Complaint -->
+
+            <div class="card">
+
+                <h3>Submit Complaint</h3>
+
+                <p class="text-muted" style="margin-bottom:20px;">
+                    Report an issue to the concerned department.
+                </p>
+
+
+                <form id="complaintForm">
+
+                    <div class="form-group">
+
+                        <label for="title">
+                            Complaint Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="e.g. Wi-Fi not working"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            placeholder="Describe your complaint..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Category
+                        </label>
+
+                        <select id="category" name="category">
+
+                            <option value="Academic">
+                                Academic
+                            </option>
+
+                            <option value="Hostel">
+                                Hostel
+                            </option>
+
+                            <option value="Library">
+                                Library
+                            </option>
+
+                            <option value="IT">
+                                IT & Technical
+                            </option>
+
+                            <option value="Maintenance">
+                                Maintenance
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority" name="priority">
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Submit Complaint
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- My Complaints -->
+
+            <div class="card">
+
+                <h3>My Complaints</h3>
+
+                <p class="text-muted" style="margin-bottom:20px;">
+                    Track the status of your submitted complaints.
+                </p>
+
+
+                <!-- Complaint 1 -->
+
+                <div class="card"
+                     style="
+                        padding:18px;
+                        margin-bottom:15px;
+                        border-left:4px solid #0d6efd;
+                        box-shadow:none;
+                        border:1px solid #e5e7eb;
+                     ">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        gap:10px;
+                        margin-bottom:10px;
+                     ">
+
+                        <h3 style="font-size:17px;">
+                            Campus Wi-Fi Issue
+                        </h3>
+
+                        <span class="badge badge-warning">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:14px; margin-bottom:12px;">
+
+                        Wi-Fi connection is not working properly
+                        in the computer lab.
+
+                    </p>
+
+
+                    <div>
+
+                        <span class="badge badge-primary">
+                            IT & Technical
+                        </span>
+
+                        <span class="badge badge-danger">
+                            High Priority
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:12px; margin-top:12px;">
+
+                        Complaint ID: #CMP-001
+
+                    </p>
+
+                </div>
+
+
+                <!-- Complaint 2 -->
+
+                <div class="card"
+                     style="
+                        padding:18px;
+                        margin-bottom:15px;
+                        border-left:4px solid #198754;
+                        box-shadow:none;
+                        border:1px solid #e5e7eb;
+                     ">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        gap:10px;
+                        margin-bottom:10px;
+                     ">
+
+                        <h3 style="font-size:17px;">
+                            Library AC Problem
+                        </h3>
+
+                        <span class="badge badge-success">
+                            Resolved
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:14px; margin-bottom:12px;">
+
+                        Air conditioner is not working
+                        in the library reading area.
+
+                    </p>
+
+
+                    <div>
+
+                        <span class="badge badge-primary">
+                            Library
+                        </span>
+
+                        <span class="badge badge-warning">
+                            Medium Priority
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:12px; margin-top:12px;">
+
+                        Complaint ID: #CMP-002
+
+                    </p>
+
+                </div>
+
+
+                <!-- Complaint 3 -->
+
+                <div class="card"
+                     style="
+                        padding:18px;
+                        border-left:4px solid #6c757d;
+                        box-shadow:none;
+                        border:1px solid #e5e7eb;
+                     ">
+
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        gap:10px;
+                        margin-bottom:10px;
+                     ">
+
+                        <h3 style="font-size:17px;">
+                            Classroom Projector Issue
+                        </h3>
+
+                        <span class="badge badge-warning">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:14px; margin-bottom:12px;">
+
+                        Projector is not displaying properly
+                        during lectures.
+
+                    </p>
+
+
+                    <div>
+
+                        <span class="badge badge-primary">
+                            Academic
+                        </span>
+
+                        <span class="badge badge-warning">
+                            Medium Priority
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-muted"
+                       style="font-size:12px; margin-top:12px;">
+
+                        Complaint ID: #CMP-003
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
